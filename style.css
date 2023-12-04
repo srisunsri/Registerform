@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Noto+Serif+Vithkuqi&display=swap');
+
+.container {
+    display: flex;
+    /* height: 97vh; */
+}
+
+body {
+    background: rgb(250, 51, 51);
+    background: radial-gradient(circle, rgba(250, 51, 51, 1) 19%, rgba(255, 2, 92, 1) 83%);
+}
+
+.firstpart {
+    flex: 3;
+    border: 1px solid rgb(0, 45, 0);
+    background-color: white;
+}
+
+.row {
+    display: flex;
+
+}
+
+.edit {
+    width: 120px;
+}
+
+.del {
+    width: 120px
+}
+
+.secondpart {
+    flex: 7;
+    border: 1px solid rgb(1, 19, 1);
+    text-align: center;
+}
+
+.formborder {
+    padding: 22px;
+    /* height: 20vh; */
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-top: 3px;
+    border: 1px solid rgb(188, 184, 184);
+    border-radius: 5px;
+    padding: 7px;
+}
+
+
+form {
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(97, 0, 19);
+    font-family: 'Indie Flower', cursive;
+}
+
+button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: rgb(97, 0, 19);
+    border: none;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(194, 25, 25);
+    cursor: pointer;
+}
+
+
+.error {
+    color: red;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.field.success input {
+    border-color: green;
+}
+
+.field.error input {
+    border-color: red;
+}
+
+.field input:focus {
+    outline: 0;
+}
+
+thead {
+    padding: 40px;
+}
+
+td {
+    padding: 10px;
+}
+
+th {
+    padding: 20px;
+}
+
+table {
+    text-align: center;
+    color: white;
+    border-color: rgb(1, 253, 106);
+    margin-left: 10px;
+    margin-top: 10px;
+}

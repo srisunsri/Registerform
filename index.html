@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="ind.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="firstpart">
+            <div class="formborder">
+                <form method="POST" action="" id="form" name="formm">
+                    <h1>EMPLOYEE REGISTRATION FORM</h1>
+                    <div class="field">
+                        <label for="eid">EmployeeId</label>
+                        <input type="text" id="eid" name="eid" placeholder="eg: '000' format">
+                        <div class="error"></div>
+                    </div>
+                    <div class="field">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username">
+                        <div class="error"></div>
+                    </div>
+                    <div class="field">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob">
+                        <div class="error"></div>
+                    </div>
+                    <div class="field">
+                        <label for="doj">Date of Joining</label>
+                        <input type="date" id="doj" name="doj">
+                        <div class="error"></div>
+                    </div>
+                    <div class="field">
+                        <label for="dept">Department</label>
+                        <input type="text" id="dept" name="dept">
+                        <div class="error"></div>
+                    </div>
+                    <div class="field">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address">
+                        <div class="error"></div>
+                    </div>
+                    <div class="field">
+                        <label for="salary">Salary</label>
+                        <input type="text" id="salary" name="salary">
+                        <div class="error"></div>
+                    </div><br>
+                    <input type="hidden" id="edit-id" name="edit-id">
+
+                    <button type="submit">Register</button><br><br>
+
+                </form>
+                <!-- <button onclick="clear()">Clear</button> -->
+            </div>
+        </div>
+        <div class="secondpart">
+            <table id="tb1" class="table" border=" 1">
+                <thead>
+                    <th>EmployeeId</th>
+                    <th>Username</th>
+                    <th>DOB</th>
+                    <!-- <th>Age</th> -->
+                    <th>DOJ</th>
+                    <!-- <th>Experience</th> -->
+                    <th>Department</th>
+                    <th>Address</th>
+                    <th>Salary</th>
+                    <th>Operations</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
