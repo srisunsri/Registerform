@@ -11,6 +11,35 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (Valid()) {
         add();
+        const formData = new FormData(form);
+        const data = {};
+        console.log(formData);
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+        for (let x of formData.entries()) {
+            console.log(x);
+        }
+        fetch('http://localhost:3001/submit', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then((response) => response.json())
+            .then((result) => {
+                if (result.success) {
+                    console.log('Data submitted successfully');
+                } else {
+                    console.error('Error submitting data: ', result.error);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+
         clear();
     }
 })
@@ -149,7 +178,7 @@ function add() {
 }
 
 function Edit(button) {
-    var row = button.closest('tr'); 
+    var row = button.closest('tr');
     var eidv = row.cells[0].innerHTML;
     var usernamev = row.cells[1].innerHTML;
     var dobv = row.cells[2].innerHTML;
